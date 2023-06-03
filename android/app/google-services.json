@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "187953718415",
+    "project_id": "fir-chatapp-3597e",
+    "storage_bucket": "fir-chatapp-3597e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187953718415:android:e03ab1c91a0ab71c127cfa",
+        "android_client_info": {
+          "package_name": "com.firebasechatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187953718415-ul5d5sa7n2llf0iev61g1eqtbuquvn7r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSHwifj2Il49rOHLBElOSbTWVRgoPddgM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187953718415-ul5d5sa7n2llf0iev61g1eqtbuquvn7r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187953718415:android:735cd2e41feeb337127cfa",
+        "android_client_info": {
+          "package_name": "com.switchbtyes.firebasechatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187953718415-3b2md7vvqn1ethv38gaciuch4tpaejr8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.switchbtyes.firebasechatapp",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "187953718415-ul5d5sa7n2llf0iev61g1eqtbuquvn7r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSHwifj2Il49rOHLBElOSbTWVRgoPddgM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187953718415-ul5d5sa7n2llf0iev61g1eqtbuquvn7r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
