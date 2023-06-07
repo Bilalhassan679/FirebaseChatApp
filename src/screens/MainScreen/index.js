@@ -1,22 +1,39 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import firestore from '@react-native-firebase/firestore';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import Profile from '../Tabs/Profile';
+import Logout from '../Tabs/Logout';
+
 const MainScreen = ({navigation}) => {
-  const Logout = async () => {
-    await AsyncStorage.removeItem('email');
-    await AsyncStorage.removeItem('name');
-    await AsyncStorage.removeItem('password');
-    navigation.navigate('LoginScreen');
-  };
+  const [tab, setTabs] = React.useState(0);
+
   return (
-    <View>
-      <Text>MainScreen</Text>
-      <Text onPress={Logout}>Logout</Text>
-    </View>
+    <>
+      <View style={{flex: 1}}>{tab === 0 ? <Profile /> : <Logout />}</View>
+      <View style={styles.tabBar}>
+        <Text
+          onPress={() => {
+            setTabs(0);
+          }}>
+          Profile
+        </Text>
+        <Text onPress={() => setTabs(1)}>LogOut</Text>
+      </View>
+    </>
   );
 };
 
 export default MainScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  tabBar: {
+    flexDirection: 'row',
+    backgroundColor: 'purple',
+    height: 80,
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    // borderRadius: 20,
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
+  },
+});

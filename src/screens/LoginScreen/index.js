@@ -88,6 +88,9 @@ const LoginScreen = ({navigation}) => {
           </View>
         )}
       </Formik>
+      <Text onPress={() => navigation.navigate('SignUpScreen')}>
+        SignUpScreen
+      </Text>
     </View>
   );
 };
