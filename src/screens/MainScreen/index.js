@@ -3,13 +3,18 @@ import React from 'react';
 import firestore from '@react-native-firebase/firestore';
 import Profile from '../Tabs/Profile';
 import Logout from '../Tabs/Logout';
+import {useRoute} from '@react-navigation/native';
 
-const MainScreen = ({navigation}) => {
+const MainScreen = () => {
+  const route = useRoute();
+  const userId = route.params.userId;
   const [tab, setTabs] = React.useState(0);
 
   return (
     <>
-      <View style={{flex: 1}}>{tab === 0 ? <Profile /> : <Logout />}</View>
+      <View style={{flex: 1}}>
+        {tab === 0 ? <Profile userId={userId} /> : <Logout />}
+      </View>
       <View style={styles.tabBar}>
         <Text
           onPress={() => {

@@ -34,10 +34,14 @@ const LoginScreen = ({navigation}) => {
             JSON.stringify(res.docs[0].data().email),
           );
           await AsyncStorage.setItem(
-            'password ',
-            JSON.stringify(res.docs[0].data().password),
+            'firstName ',
+            JSON.stringify(res.docs[0].data().firstName),
           );
-          navigation.navigate('MainScreen');
+
+          console.log(res.docs[0].data().userId, 'uesr11');
+          navigation.navigate('MainScreen', {
+            userId: res.docs[0].data().userId,
+          });
         }
       })
       .catch(err => {

@@ -1,11 +1,13 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-const Logout = ({navigation}) => {
+import {useNavigation} from '@react-navigation/native';
+const Logout = () => {
+  const navigation = useNavigation();
   const Logout = async () => {
     await AsyncStorage.removeItem('email');
-    await AsyncStorage.removeItem('name');
-    await AsyncStorage.removeItem('password');
+    await AsyncStorage.removeItem('firstName');
+    await AsyncStorage.removeItem('personId');
     navigation.navigate('LoginScreen');
   };
   return (
